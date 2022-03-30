@@ -6,13 +6,13 @@ body {
 }
 
 .App-logo {
-  height: 80px;
+  height: 120px;
 }
 
 .App-header {
-  background-color: #222;
+  background-color: white;
   padding: 20px;
-  color: white;
+  color: #007bff;
 }
 
 .App-header .title{
@@ -54,3 +54,32 @@ body {
 .Countdown-col-element strong{
   font-size: 50px;
 }
+
+@keyframes move {
+  100% {
+      transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 191, 255, 0.1);
+  overflow: hidden;
+}
+
+.background span {
+  width: 7vmin;
+  height: 7vmin;
+  border-radius: 7vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 45;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
